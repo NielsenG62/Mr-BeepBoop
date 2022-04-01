@@ -8,11 +8,12 @@ function makeArray(input) {
 
 function beep(input) {
   let numberArray = makeArray(input);
-  debugger;
   let beepArray = [];
   numberArray.forEach(function (number) {
-    if (number === 1) {
-      beepArray.push("Beep!");
+    if (number === 2) {
+      beepArray.push("Boop!");
+    } else if (number === 1) {
+      beepArray.push("Beep");
     } else {
       beepArray.push(number);
     }
