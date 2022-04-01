@@ -1,3 +1,5 @@
+// Business Logic
+
 function makeArray(input) {
   let numberArray = [];
   for (i = 0; i <= input; i++) {
@@ -20,5 +22,16 @@ function beepBoopNeighbor(input) {
       beepArray.push(number);
     }
   });
-  return beepArray;
+  return beepArray.join(", ");
 }
+
+// UI Logic
+
+$(document).ready(function () {
+  $("button").click(function () {
+    const input = $("input").val();
+    $("#robot").attr("src", "img/robot-dance2.gif");
+    $("#neighbor-text").text(beepBoopNeighbor(input));
+    $("#output-text").removeClass("hidden");
+  });
+});

@@ -27,10 +27,7 @@
   <body>
     <div class="container">
       <h1>Won't you beep my neighbor?</h1>
-      <img
-        src="https://mymodernmet.com/wp/wp-content/uploads/2021/01/boston-dynamics-do-you-love-me-robot-dance-02.gif"
-        alt="robot dancing"
-      />
+      <img id="robot" src="img/robot-dance1.gif" alt="robot dancing" />
       <label for="input">Enter in a number and watch Mr. BeepBoop count!</label>
       <input
         class="form-control"
@@ -40,7 +37,7 @@
         step="1"
       />
       <button type="button" class="btn btn-secondary">Neighbor?</button>
-      <div class="hidden">
+      <div id="ouput-text" class="hidden">
         <p id="neighbor-text"></p>
       </div>
     </div>
