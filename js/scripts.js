@@ -32,14 +32,20 @@ $(document).ready(function () {
     $("#neighbor-text").text("");
     const input = $("input").val();
     let i = 0;
-    const txt = beepBoopNeighbor(input); /* The text */
-    const speed = 10; /* The speed/duration of the effect in milliseconds */
+    const txt = beepBoopNeighbor(input);
+    const speed = 15;
     typeWriter();
     function typeWriter() {
       if (i < txt.length) {
+        $("button").addClass("flash");
+        $("button").text("NEIGHBOR DETECTED");
         document.getElementById("neighbor-text").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
+      } else {
+        $("#robot").attr("src", "img/robot-dance1.gif");
+        $("button").text("Neighbor?");
+        $("button").removeClass("flash");
       }
     }
     $("#robot").attr("src", "img/robot-dance2.gif");
