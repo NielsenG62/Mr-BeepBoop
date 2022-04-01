@@ -29,6 +29,7 @@ https://nielseng62.github.io/programming-language-suggestor/
 ## Known Bugs
 
 - _When the button has class of "flash", it is slightly smaller_
+- _If the button is clicked multiple times, the setTimeout won't clear, resulting in the function running and printing simultaneously_
 
 ## License
 
