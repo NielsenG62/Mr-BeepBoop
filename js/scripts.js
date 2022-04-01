@@ -28,7 +28,7 @@ function beepBoopNeighbor(input) {
 // UI Logic
 
 $(document).ready(function () {
-  $("button").click(function () {
+  $("#submit").click(function () {
     $("#neighbor-text").text("");
     const input = $("input").val();
     let i = 0;
@@ -37,18 +37,19 @@ $(document).ready(function () {
     typeWriter();
     function typeWriter() {
       if (i < txt.length) {
-        $("button").addClass("flash");
-        $("button").text("NEIGHBOR DETECTED");
+        $("#submit").addClass("flash");
+        $("#submit").text("NEIGHBOR DETECTED");
+        $("#reset").removeClass("hidden");
         document.getElementById("neighbor-text").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       } else {
         $("#robot").attr("src", "img/robot-dance1.gif");
-        $("button").text("Neighbor?");
-        $("button").removeClass("flash");
+        $("#submit").text("Neighbor?");
+        $("#submit").removeClass("flash");
+        $("#reset").addClass("hidden");
       }
     }
     $("#robot").attr("src", "img/robot-dance2.gif");
-    $("#output-text").removeClass("hidden");
   });
 });

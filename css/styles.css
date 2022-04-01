@@ -9,6 +9,10 @@ body {
   margin-top: 2em;
 }
 
+.hidden {
+  display: none;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -23,7 +27,15 @@ label {
 
 button {
   margin-top: 2em;
-  margin-bottom: 2em;
+}
+
+#reset {
+  position: absolute;
+  margin-left: 5px;
+}
+
+#output-text {
+  margin-top: 2em;
 }
 
 .flash {
@@ -32,17 +44,20 @@ button {
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
+
 @keyframes glowing {
   0% {
     background-color: #b20000;
     border: #b20000;
     -webkit-box-shadow: 0 0 3px #b20000;
   }
+
   50% {
     background-color: #ff0000;
     border: #ff0000;
     -webkit-box-shadow: 0 0 40px #ff0000;
   }
+
   100% {
     background-color: #b20000;
     border: #b20000;
