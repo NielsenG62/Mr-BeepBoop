@@ -20,4 +20,12 @@ Expected Output: [0, 'Beep!', 'Boop!', 3, 4, 5,]
 Test: "it should turn a 3 into 'Won't you be my neighbor?'"
 Code: beep(5);
 Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5,]
+
+Test: "it should turn any number with 1 into 'Beep!'"
+Code: beep(10);
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep']
+
+Test: "it should prioritize numbers with 3, then 2, then 1."
+Code: beep(15);
+Expected Output: [0, 'Beep!', 'Boop!', "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, 'Beep', 'Beep!', 'Boop!', "Won't you be my neighbor?", 'Beep', 'Beep']
 ```
