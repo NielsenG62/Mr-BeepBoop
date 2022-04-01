@@ -1,3 +1,41 @@
+# _Mr. BeepBoop's Neighborhood_
+
+#### By _**Gabe Nielsen**_
+
+#### _A counting machine with a twist_
+
+## Technologies Used
+
+- _HTML_
+- _CSS_
+- _Bootstrap_
+- _JavaScript_
+- _jQuery_
+
+## Description
+
+_This website has a single input field. when a user enters a number, Mr. BeepBoop will begin counting. Starting from 0, he will count up to your number, with a few exceptions. When he encounters a 3, he will say "Won't you be my neighbor?", with a 2 he will "Boop!", and with a 1 he will "Beep!"_
+
+## Setup/Installation Requirements
+
+- _Clone this repository_
+- _Navigate to the top level of this directory_
+- _Open index.html in your browser of choice_
+
+## Link to project on GitHub Pages
+
+https://nielseng62.github.io/programming-language-suggestor/
+
+## Known Bugs
+
+- _When the button has class of "flash", it is slightly smaller_
+
+## License
+
+Copyright (c) _2022_ _Gabe Nielsen_
+
+## Specs:
+
 ```javascript
 
 Describe: makeArray()
