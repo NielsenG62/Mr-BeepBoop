@@ -10,7 +10,9 @@ function beep(input) {
   let numberArray = makeArray(input);
   let beepArray = [];
   numberArray.forEach(function (number) {
-    if (number === 2) {
+    if (number === 3) {
+      beepArray.push("Won't you be my neighbor?");
+    } else if (number === 2) {
       beepArray.push("Boop!");
     } else if (number === 1) {
       beepArray.push("Beep");
