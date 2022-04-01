@@ -24,7 +24,7 @@ _This website has a single input field. when a user enters a number, Mr. BeepBoo
 
 ## Link to project on GitHub Pages
 
-https://nielseng62.github.io/programming-language-suggestor/
+https://nielseng62.github.io/Mr-Rodgers/
 
 ## Known Bugs
 
