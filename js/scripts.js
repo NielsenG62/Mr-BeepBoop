@@ -27,7 +27,7 @@ function beepBoopNeighbor(input) {
 
 // UI Logic
 
-function notTyping() {
+function reset() {
   $("#robot").attr("src", "img/robot-dance1.gif");
   $("#submit").text("Neighbor?");
   $("#submit").removeClass("flash");
@@ -35,7 +35,6 @@ function notTyping() {
 }
 
 function typing() {
-  $("#output-text").removeClass("hidden");
   $("#neighbor-text").text("");
   $("#submit").addClass("flash");
   $("#submit").text("NEIGHBOR DETECTED");

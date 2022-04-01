@@ -26,24 +26,32 @@
   </head>
   <body>
     <div class="container">
-      <h1>Won't boop beep my neighbor?</h1>
-      <img id="robot" src="img/robot-dance1.gif" alt="robot dancing" />
-      <label for="input">Enter in a number and watch Mr. BeepBoop count!</label>
-      <input
-        class="form-control"
-        placeholder="Beep! Boop!"
-        type="number"
-        min="0"
-        step="1"
-      />
-      <button id="submit" type="button" class="btn btn-secondary">
-        Neighbor?
-      </button>
-      <button id="reset" type="button" class="hidden btn btn-outline-secondary">
-        Stop Typing
-      </button>
+      <div class="center">
+        <h1>Won't boop beep my neighbor?</h1>
+        <img id="robot" src="img/robot-dance1.gif" alt="robot dancing" />
+        <label for="input"
+          >Enter in a number and watch Mr. BeepBoop count!</label
+        >
+        <input
+          class="form-control"
+          placeholder="Beep! Boop!"
+          type="number"
+          min="0"
+          step="1"
+        />
+        <button id="submit" type="button" class="btn btn-secondary">
+          Neighbor?
+        </button>
+        <button
+          id="reset"
+          type="button"
+          class="hidden btn btn-outline-secondary"
+        >
+          Stop Typing
+        </button>
+      </div>
       <div id="output-text">
-        <p id="neighbor-text"></p>
+        <p id="neighbor-text">&nbsp;</p>
       </div>
     </div>
   </body>

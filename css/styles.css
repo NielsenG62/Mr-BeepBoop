@@ -5,8 +5,11 @@ body {
 .container {
   background-color: #a8a9ad;
   padding: 3em;
-  text-align: center;
   margin-top: 2em;
+}
+
+.center {
+  text-align: center;
 }
 
 .hidden {
@@ -36,12 +39,33 @@ button {
 
 #output-text {
   margin-top: 2em;
+  background-color: black;
+  padding: 1em;
+}
+
+#neighbor-text {
+  display: inline;
+  text-align: left;
+  font-family: monospace;
+  color: rgb(26, 158, 26);
+  font-weight: bold;
+  margin: 0;
+  border-right: 3px solid rgb(26, 158, 26);
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(26, 158, 26);
+  }
 }
 
 .flash {
   -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
 
