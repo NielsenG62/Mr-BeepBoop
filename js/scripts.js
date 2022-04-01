@@ -27,9 +27,25 @@ function beepBoopNeighbor(input) {
 
 // UI Logic
 
+function notTyping() {
+  $("#robot").attr("src", "img/robot-dance1.gif");
+  $("#submit").text("Neighbor?");
+  $("#submit").removeClass("flash");
+  $("#reset").addClass("hidden");
+}
+
+function typing() {
+  $("#output-text").removeClass("hidden");
+  $("#neighbor-text").text("");
+  $("#submit").addClass("flash");
+  $("#submit").text("NEIGHBOR DETECTED");
+  $("#robot").attr("src", "img/robot-dance2.gif");
+  $("#reset").removeClass("hidden");
+}
+
 $(document).ready(function () {
   $("#submit").click(function () {
-    $("#neighbor-text").text("");
+    typing();
     const input = $("input").val();
     let i = 0;
     const txt = beepBoopNeighbor(input);
@@ -37,19 +53,16 @@ $(document).ready(function () {
     typeWriter();
     function typeWriter() {
       if (i < txt.length) {
-        $("#submit").addClass("flash");
-        $("#submit").text("NEIGHBOR DETECTED");
-        $("#reset").removeClass("hidden");
         document.getElementById("neighbor-text").innerHTML += txt.charAt(i);
         i++;
-        setTimeout(typeWriter, speed);
+        let typing = setTimeout(typeWriter, speed);
+        $("#reset").click(function () {
+          reset();
+          clearTimeout(typing);
+        });
       } else {
-        $("#robot").attr("src", "img/robot-dance1.gif");
-        $("#submit").text("Neighbor?");
-        $("#submit").removeClass("flash");
-        $("#reset").addClass("hidden");
+        reset();
       }
     }
-    $("#robot").attr("src", "img/robot-dance2.gif");
   });
 });
