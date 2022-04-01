@@ -39,18 +39,19 @@ button {
 
 #output-text {
   margin-top: 2em;
-  background-color: black;
+  background-color: #282828;
   padding: 1em;
 }
 
 #neighbor-text {
   display: inline;
   text-align: left;
-  font-family: monospace;
-  color: rgb(26, 158, 26);
+  font-family: "Press Start 2P", cursive;
+  color: #39ff14;
   font-weight: bold;
+  font-size: 0.8em;
   margin: 0;
-  border-right: 3px solid rgb(26, 158, 26);
+  border-right: 4px solid #39ff14;
   animation: blink-caret 1s step-end infinite;
 }
 
@@ -60,7 +61,7 @@ button {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(26, 158, 26);
+    border-color: #39ff14;
   }
 }
 
