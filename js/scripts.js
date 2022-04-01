@@ -27,8 +27,26 @@ function beepBoopNeighbor(input) {
 
 // UI Logic
 
+// function typeWriter() {
+//   var i = 0;
+//   var txt = beepBoopNeighbor(input);
+//   var speed = 6;
+//   if (i < txt.length) {
+//     document.getElementById("demo").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// const input = $("input").val();
+// const text = beepBoopNeighbor(input);
+// for (i = 0; i < text.length; i++) {
+//   $("#neighbor-text").text += text.charAt(i);
+//   setTimeout(typeWriter, 6);
+// }
+// }
+
 $(document).ready(function () {
   $("button").click(function () {
+    // typeWriter();
     const input = $("input").val();
     $("#robot").attr("src", "img/robot-dance2.gif");
     $("#neighbor-text").text(beepBoopNeighbor(input));
